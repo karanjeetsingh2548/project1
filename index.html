@@ -1,0 +1,420 @@
+<<html>
+  <head><link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  rel="stylesheet"
+/>
+    <title>My Portfolio</title>
+    <script data-ad-client="ca-pub-6585492139722183" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; 
+  font-weight: 400;
+  line-height: 1.4;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffaa22;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: #aabbff;
+}
+
+
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: green;
+}
+
+
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: green;
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid green;
+  color:black;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: gray;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: gray;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: gray;
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background:red;
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: gray;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 0rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: gray;
+  border-top: 4px solid gray;
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <script>
+      d3.select("body")
+.append("h1")
+.text("Learning D3");
+    </script>
+<nav id="navbar" class="nav">
+<ul class ="nav-list">
+  <li>
+  <a href="#welcome-section">
+    ABOUT</a>
+  </a>
+  <li>
+  <a href="#projects">
+  PROJECTS
+  </a>
+  </li>
+  <li>
+  <a href="#contact">
+  CONTACTS
+    </a>
+  </li>
+  </ul>
+</nav>
+<section id="welcome-section" class="welcome-section">
+  <h2> ABHISHEK GOYAL</h2>
+  <p>"Welcome to my portfolio guys"
+  </p>
+</section>
+ 
+<section id="projects" class="project-section">
+    <h2 class="projects-section-header">These are some of my projects</h2>
+  <div class="projects-grid">
+<a href="https://codepen.io/abhishek1085/full/gOaQrYo" alt="sorry" target="_blank" class="project project-title"><img src="https://user-images.githubusercontent.com/45648611/84219350-ef7ae080-aaed-11ea-9967-670c1b197bbd.png" class="project-image"> 
+  <p class="project-title">
+    <span class="code">&lt;</span>
+    TRIBUTE PAGE
+  <span class="code">&#47;&gt;</span>
+  </p></a>
+  <a href="https://codepen.io/abhishek1085/full/bGVQQQp" alt="sorry" target="_blank" class="project project-title">
+   <img src="https://user-images.githubusercontent.com/45648611/84219688-b7c06880-aaee-11ea-8111-3f8bd8a3e37b.png" class="project-image">
+    <p class="project-title">
+      <span class="code">&lt;</span>
+        feedbak
+        <span class="code">&#47;&gt;</span></p>
+  </a>
+  <a href="https://codepen.io/abhishek1085/full/abvrwQv" target="_blank" alt="sorry" class="project project-title">
+  <img src="https://user-images.githubusercontent.com/45648611/84220219-eab72c00-aaef-11ea-8e19-d7c181fd3227.png">
+ <p class="project-title">
+      <span class="code">&lt;</span>
+        product
+        <span class="code">&#47;&gt;</span></p>
+  </a>
+  <a href="https://codepen.io/abhishek1085/full/KKdYYJg" alt="sorry" target="_blank" class="project project-title">
+   <img src="https://user-images.githubusercontent.com/45648611/84220367-38cc2f80-aaf0-11ea-8405-658239af63e8.png">
+   <p class="project-title">
+      <span class="code">&lt;</span>
+        documentation
+        <span class="code">&#47;&gt;</span></p>
+  </a>
+  </div>
+  </section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Let's work together...</h2>
+    <p>Come and grow with me</p>
+  </div>
+  <div class="contact-links">
+    <a href="https://www.facebook.com/abhishek.goyal.1213986"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-facebook-square"></i> Facebook</a
+    >
+    <a
+      id="profile-link"
+      href="https://github.com/Abhishek445566"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-github"></i> GitHub</a
+    >
+    <a
+      href="https://www.linkedin.com/in/abhishek-goyal-a08a0414a"
+      target="_blank"
+      class="btn contact-details"
+       ><i class="fab fa-linkedin"></i> LINKEDIN</a>
+    <br>
+  <a href="https://www.instagram.com/abhi_goyal445566" target="_blank" alt="sorry"class="btn contact-details"
+       ><i class="fab fa-instagram"></i>INSTAGRAM</a>
+  <br>
+  <a href="https://www.youtube.com/channel/UCzuHk_qkqg_7f0BihfPG7Vg?view_as=subscriber" target="_blank" alt="sorry"class="btn contact-details"
+       ><i class="fab fa-youtube"></i>YOUTUBE
+  </a>
+  <br>
+  </section>
+  </body>
+</html>
