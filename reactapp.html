@@ -20,26 +20,26 @@
     submit:''
     };
     this.handleInput=this.handleInput.bind(this);
-    this.handleSubmit-this.handleSubmit.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
     }
     handleInput(event){
-    this.setState(state=>({
+    this.setState({
     input:event.target.value;
-    }));
+    });
     }
-    handleInput(){
-    this.setState(state=>({
+    handleSubmit(){
+    this.setState({
     submit:state.input
-    }));
+    });
     }
     render(){
     return (
-    <form onSubmit="this.handleSubmit">
+    <form onSubmit={this.handleSubmit}>
     <input value={this.state.input} onChange={this.handleInput}/>
     <button type="submit" class="btn btn-block btn-primary">submit</button>
     </form>
-    <div>{this.state.input}
-    </div>
+    <h1>{this.state.input}
+    </h1>
     );
     }
     }
