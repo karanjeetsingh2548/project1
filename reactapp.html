@@ -20,17 +20,13 @@
       inputpassword:'',
       submitid: '',
       submitpassword:'',
-      count:0
     };
-    this.counter=this.counter.bind(this);
+ 
     this.handleChangei = this.handleChangei.bind(this);
     this.handleChangep = this.handleChangep.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  counter(){
-  this.setState(state({
-  count:state.count+1}));
-  }
+  
   handleChangei(event) {
     this.setState({
       inputid: event.target.value
@@ -65,10 +61,10 @@
           <button type='submit' class="btn btn-primary" onClick={this.counter}>Submit!</button>
         </form>
         { /* change code below this line */ }
-if(this.state.count>==9){
+
 <h1>{this.state.submitid}</h1>
  <h2>{this.state.submitpassword}</h2>
- }
+ 
         { /* change code above this line */ }
       </div>
     );
