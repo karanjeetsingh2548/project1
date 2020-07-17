@@ -12,44 +12,61 @@
     <div id="app"></div>
     <script type="text/babel">
     
-    class App extends React.Component {
+   class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '',
-      submit: ''
+      inputid: '',
+      inputpassword:'',
+      submitid: '',
+      submitpassword:''
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangei = this.handleChangei.bind(this);
+    this.handleChangep = this.handleChangep.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
+  handleChangei(event) {
     this.setState({
-      input: event.target.value
+      inputid: event.target.value
     });
   }
-  handleSubmit(event) {
-    event.preventDefault()
+  handleChangep(event) {
     this.setState({
-      submit: this.state.input
+      inputpassword: event.target.value
     });
+  }
+  handleSubmit() {
+    // change code below this line
+ 
+    this.setState({
+      submitid: this.state.inputid, 
+      submitpassword:this.state.inputpassword
+    });
+    // change code above this line
   }
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
-            value={this.state.input}
-            onChange={this.handleChange} />
-            <input
-            value={this.state.input}
-            onChange={this.handleChange} type="password" />
-          <button type='submit' class="btn btn-primary">Submit!</button>
+          { /* change code below this line */ }
+ <input
+            value={this.state.inputid}
+            onChange={this.handleChangei} />
+             <input
+            value={this.state.inputpassword}
+            onChange={this.handleChangep} type="password" />
+          { /* change code above this line */ }
+          <button type='submit' class="btn btn=primary">Submit!</button>
         </form>
-        <h1>{this.state.submit}</h1>
+        { /* change code below this line */ }
+ <h1>{this.state.submitid}</h1>
+ <h2>{this.state.submitpassword}</h2>
+        { /* change code above this line */ }
       </div>
     );
   }
 };
+
 
     ReactDOM.render(<App />,document.querySelector('#app'));
     </script>
